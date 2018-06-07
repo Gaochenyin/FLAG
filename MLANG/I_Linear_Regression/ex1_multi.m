@@ -118,9 +118,9 @@ fprintf('\n');
 % Recall that the first column of X is all-ones. Thus, it does
 % not need to be normalized.
 % You should change this
-predict = [1,1650,3];
+predict = [1, 1650, 3];
 
-predict(1,2:3) = (predict(1,2:3) - mu) ./ sigma;
+predict(1, 2:3) = (predict(1, 2:3) - mu) ./ sigma;
 
 price = predict * theta;
 % ============================================================
@@ -167,7 +167,7 @@ fprintf('\n');
 % ====================== YOUR CODE HERE ======================
 % price = 0; % You should change this
 
-predict = [1,1650,3];
+predict = [1, 1650, 3];
 
 price = predict * theta;
 

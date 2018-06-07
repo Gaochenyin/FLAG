@@ -12,10 +12,14 @@ J = 0;
 % ====================== YOUR CODE HERE ======================
 % Instructions: Compute the cost of a particular choice of theta
 %               You should set J to the cost.
+
+% For loop version
 %for i = 1 : m;
-%    J = J + power((theta' .* X(i,:) - y(i,:)),2);
+%    J = J + power((theta' .* X(i, :) - y(i,:)), 2);
 %end
 %J = J / (2 * m);
+
+% Vectorize version
 J = sum((X * theta - y) .^ 2) / (2 * m);
 % =========================================================================
 
