@@ -1,2 +1,8 @@
-ex1. Run the "hello, world" program on your system. Experiment with leaving out parts of the program, to see what error messages you get.
-ex2. Experiment to find out what happens when printf's argument string contains \c, where c is some character not listed above.
+- *ex1*. Run the "hello, world" program on your system. Experiment with leaving out parts of the program, to see what error messages you get.
+- *ex2*. Experiment to find out what happens when printf's argument string contains \c, where c is some character not listed above.
+- *ex3*. Modify the temperature conversion program to print a heading above the table.
+- *ex4*. Write a program to print the corresponding Celsius to Fahrenheit table.
+- *ex5*. Modify the temperature conversion program to print the table in reverse order, that is, from 300 degrees to 0.
+- *ex6*. Verify that the expression getchar()!=EOF is 0 or 1.
+- *ex7*. Write a program to print the value of EOF.
+- *ex8*. Write a program to count blanks, tabs, and newlines.
