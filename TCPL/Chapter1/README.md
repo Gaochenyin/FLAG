@@ -6,3 +6,4 @@
 - *ex6*. Verify that the expression getchar()!=EOF is 0 or 1.
 - *ex7*. Write a program to print the value of EOF.
 - *ex8*. Write a program to count blanks, tabs, and newlines.
+- *ex9*. Write a program to copy its input to its output, replacing each string of the one or more blanks by a single blank.
