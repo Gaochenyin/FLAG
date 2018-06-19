@@ -33,7 +33,7 @@ num_labels = 10;          % 10 labels, from 1 to 10
 fprintf('Loading and Visualizing Data ...\n')
 
 load('ex3data1.mat'); % training data stored in arrays X, y
-m = size(X, 1);
+m = size(X, 1); % 5000 numbers which each number is a 20x20 pic
 
 % Randomly select 100 data points to display
 rand_indices = randperm(m);
@@ -65,4 +65,4 @@ pause;
 %  After ...
 pred = predictOneVsAll(all_theta, X);
 
-fprintf('\nTraining Set Accuracy: %f\n', mean(double(pred == y)) * 100);% ·µ»Ø²»ÊÇ1¾ÍÊÇ0µÄ¾ØÕó 1±íÊ¾Ô¤²âÕıÈ· 0±íÊ¾Ô¤²â´íÎó
+fprintf('\nTraining Set Accuracy: %f\n', mean(double(pred == y)) * 100);% è¿”å›ä¸æ˜¯1å°±æ˜¯0çš„çŸ©é˜µ 1è¡¨ç¤ºé¢„æµ‹æ­£ç¡® 0è¡¨ç¤ºé¢„æµ‹é”™è¯¯

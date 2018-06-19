@@ -49,14 +49,14 @@ X = [ones(m, 1) X];
 %                 initial_theta, options);
 
 for k = 1 : num_labels
-    initial_theta = zeros(n + 1,1);
+    initial_theta = zeros(n+1, 1);
     
-    options = optimset('GradObj','on','MaxIter',50);
+    options = optimset('GradObj', 'on', 'MaxIter', 50);
     
-    [theta] = fmincg(@(t)(lrCostFunction(t,X,(y == k),lambda)),initial_theta,options); % Ã¿´Î¼ÆËãÒ»¸öÑù±¾£¬È·¶¨Ò»¸ö·ÖÀàÆ÷
-    % y 5000 * 1     k 1 : 10  ???  ´ÓXÖĞÌáÈ¡10¸öÀà £¨X°üº¬5000¸ö1 - 10×Ö·ûµÄÑù±¾
-    % yÎªÑù±¾¶ÔÓ¦µÄ×Ö·û ·¶Î§Îª1 - 10£© ¸Ãº¯ÊıÈ·¶¨¶ÔÓ¦Ê¶±ğ¸ÅÂÊ×î´ó£¨¾ßÓĞ×î´ó¿ÉÄÜÊ¶±ğÎªÕâ¸ö×Ö·û£©µÄÑù±¾Öµ
-    all_theta(k,:) = theta'; 
+    [theta] = fmincg(@(t)(lrCostFunction(t, X, (y == k), lambda)), initial_theta, options); % æ¯æ¬¡è®¡ç®—ä¸€ä¸ªæ ·æœ¬ï¼Œç¡®å®šä¸€ä¸ªåˆ†ç±»å™¨
+    % y 5000 * 1     k 1 : 10  ???  ä»Xä¸­æå–10ä¸ªç±» ï¼ˆXåŒ…å«5000ä¸ª1 - 10å­—ç¬¦çš„æ ·æœ¬
+    % yä¸ºæ ·æœ¬å¯¹åº”çš„å­—ç¬¦ èŒƒå›´ä¸º1 - 10ï¼‰ è¯¥å‡½æ•°ç¡®å®šå¯¹åº”è¯†åˆ«æ¦‚ç‡æœ€å¤§ï¼ˆå…·æœ‰æœ€å¤§å¯èƒ½è¯†åˆ«ä¸ºè¿™ä¸ªå­—ç¬¦ï¼‰çš„æ ·æœ¬å€¼
+    all_theta(k, :) = theta'; 
 end
 
 % =========================================================================

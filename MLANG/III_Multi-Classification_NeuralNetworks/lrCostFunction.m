@@ -38,9 +38,9 @@ regularizedTheta = zeros(size(theta));
 %           grad = grad + YOUR_CODE_HERE (using the temp variable)
 %
 
-J = 1 / m * (-y' * log(sigmoid(X * theta)) - (1 - y') * log(1 - sigmoid(X * theta))) + lambda / (2 * m) * (sum(theta.^2) - sum(theta(1,:).^2));
+J = 1 / m * (-y' * log(sigmoid(X * theta)) - (1 - y') * log(1 - sigmoid(X * theta))) + lambda / (2 * m) * (sum(theta.^2) - sum(theta(1, :).^2));
 
-regularizedTheta(2:size(theta)) = lambda / m * theta(2:size(theta),:);
+regularizedTheta(2:size(theta)) = lambda / m * theta(2:size(theta), :);
 
 grad = 1 / m * (X' * (sigmoid(X * theta) - y)) + regularizedTheta;
 
