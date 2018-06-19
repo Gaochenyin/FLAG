@@ -22,9 +22,9 @@ p = zeros(size(X, 1), 1);
 %
 X = [ones(m, 1) X]; % Input Layer
 
-outputLayer = [ones(m,1) sigmoid(X * Theta1')] * Theta2';
+outputLayer = [ones(m, 1) sigmoid(X * Theta1')] * Theta2';
 
-[c,i] = max(outputLayer,[],2);
+[c, i] = max(outputLayer, [], 2);
 
 p = i;
 

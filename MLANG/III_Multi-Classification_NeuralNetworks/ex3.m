@@ -17,7 +17,7 @@
 %
 
 %% Initialization
-clear ; close all; clc
+clear; close all; clc
 
 %% Setup the parameters you will use for this part of the exercise
 input_layer_size  = 400;  % 20x20 Input Images of Digits
@@ -65,4 +65,4 @@ pause;
 %  After ...
 pred = predictOneVsAll(all_theta, X);
 
-fprintf('\nTraining Set Accuracy: %f\n', mean(double(pred == y)) * 100);% 返回不是1就是0的矩阵 1表示预测正确 0表示预测错误
+fprintf('\nTraining Set Accuracy: %f\n', mean(double(pred == y)) * 100);% 返回不是1就是0的矩�?1表示预测正确 0表示预测错误
