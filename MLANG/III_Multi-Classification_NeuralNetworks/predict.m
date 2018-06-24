@@ -20,9 +20,16 @@ p = zeros(size(X, 1), 1);
 %       information see 'help max'. If your examples are in rows, then, you
 %       can use max(A, [], 2) to obtain the max for each row.
 %
-X = [ones(m, 1) X]; % Input Layer
 
-outputLayer = [ones(m, 1) sigmoid(X * Theta1')] * Theta2';
+% X = [ones(m, 1) X]; % Input Layer
+% 
+% outputLayer = [ones(m, 1) sigmoid(X * Theta1')] * Theta2';
+
+inputLayer = [ones(m, 1) X];
+
+hiddenLayer1 = [ones(m, 1) sigmoid(inputLayer * Theta1')];
+
+outputLayer = sigmoid(hiddenLayer1 * Theta2');
 
 [c, i] = max(outputLayer, [], 2);
 
