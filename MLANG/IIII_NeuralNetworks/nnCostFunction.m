@@ -16,10 +16,10 @@ function [J grad] = nnCostFunction(nn_params, ...
 
 % Reshape nn_params back into the parameters Theta1 and Theta2, the weight matrices
 % for our 2 layer neural network
-Theta1 = reshape(nn_params(1:hidden_layer_size * (input_layer_size + 1)), ...
+Theta1 = reshape(nn_params(1 : hidden_layer_size*(input_layer_size + 1)), ...
                  hidden_layer_size, (input_layer_size + 1));
 
-Theta2 = reshape(nn_params((1 + (hidden_layer_size * (input_layer_size + 1))):end), ...
+Theta2 = reshape(nn_params((1 + (hidden_layer_size*(input_layer_size + 1))) : end), ...
                  num_labels, (hidden_layer_size + 1));
 
 % Setup some useful variables
@@ -62,13 +62,14 @@ Theta2_grad = zeros(size(Theta2));
 %               and Theta2_grad from Part 2.
 %
 
-a1 = [ones(m,1) X];
+% Forword propagation
+a1 = [ones(m, 1) X];
 z2 = a1 * Theta1';
-a2 = [ones(m,1) sigmoid(z2)];
+a2 = [ones(m, 1) sigmoid(z2)];
 z3 = a2 * Theta2';
 a3 = sigmoid(z3); 
 
-% ¹¹½¨Êä³öy¾ØÕó
+% Cost function
 y_vert = zeros(m, num_labels);
 
 for i = 1 : m
@@ -76,42 +77,41 @@ for i = 1 : m
 end
 
 for i = 1 : m
-    J = J + sum(-1 * y_vert(i,:) .* log(a3(i,:)) - (1 - y_vert(i,:)) .* log(1 - a3(i,:)));
+    J = J + sum(-1 * y_vert(i, :) .* log(a3(i, :)) - (1 - y_vert(i, :)) .* log(1 - a3(i, :)));
 end;  
 J = J / m;
 
-Theta1_Un = Theta1(:,2:end);
-Theta2_Un = Theta2(:,2:end);
+% Regularized cost function
+Theta1_Un = Theta1(:, 2:end);
+Theta2_Un = Theta2(:, 2:end);
 
 J = J + lambda / (2 * m) * (sum(sum(Theta1_Un.^2)) + sum(sum(Theta2_Un.^2)));
 
+% Back propagation
 Delta2 = zeros(size(Theta2));
 Delta1 = zeros(size(Theta1));
 
 for i = 1 : m
-    delta3 = a3(i,:) - y_vert(i,:);
+    delta3 = a3(i, :) - y_vert(i, :);
+    Delta2 = Delta2 + delta3' * a2(i, :);
     
     temp = delta3 * Theta2;
-    
-    delta2 = temp(:,2:end) .* sigmoidGradient(z2(i,:));
-    
-    Delta2 = Delta2 + delta3' * a2(i,:);
-    
-    Delta1 = Delta1 + delta2' * a1(i,:);
-    
+    delta2 = temp(:, 2:end) .* sigmoidGradient(z2(i, :));
+    Delta1 = Delta1 + delta2' * a1(i, :);
 end
 
 Theta2_grad = Delta2 / m;
 Theta1_grad = Delta1 / m;
 
-Theta2_grad(:,2:end) = Theta2_grad(:,2:end) + lambda / m * Theta2(:,2:end);
-Theta1_grad(:,2:end) = Theta1_grad(:,2:end) + lambda / m * Theta1(:,2:end);
+% Regularized gradients
+Theta2_grad(:, 2:end) = Theta2_grad(:, 2:end) + lambda / m * Theta2(:, 2:end);
+Theta1_grad(:, 2:end) = Theta1_grad(:, 2:end) + lambda / m * Theta1(:, 2:end);
 
 % -------------------------------------------------------------
 
 % =========================================================================
 
 % Unroll gradients
-grad = [Theta1_grad(:) ; Theta2_grad(:)];
+grad = [Theta1_grad(:); Theta2_grad(:)];
 
 end

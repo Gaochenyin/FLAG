@@ -120,7 +120,7 @@ fprintf('Program paused. Press enter to continue.\n');
 pause;
 
 
-%% ================ Part 6: Initializing Pameters ================
+%% ================ Part 6: Initializing Parameters ================
 %  In this part of the exercise, you will be starting to implment a two
 %  layer neural network that classifies digits. You will start by
 %  implementing a function to initialize the weights of the neural network
@@ -217,6 +217,7 @@ pause;
 fprintf('\nVisualizing Neural Network... \n')
 
 displayData(Theta1(:, 2:end));
+displayData(Theta2(:, 2:end));
 
 fprintf('\nProgram paused. Press enter to continue.\n');
 pause;
@@ -230,5 +231,3 @@ pause;
 pred = predict(Theta1, Theta2, X);
 
 fprintf('\nTraining Set Accuracy: %f\n', mean(double(pred == y)) * 100);
-
-
