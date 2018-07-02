@@ -16,7 +16,7 @@
 %
 
 %% Initialization
-clear ; close all; clc
+clear; close all; clc
 
 %% =========== Part 1: Loading and Visualizing Data =============
 %  We start the exercise by first loading and visualizing the dataset. 
@@ -90,7 +90,7 @@ plot(X, y, 'rx', 'MarkerSize', 10, 'LineWidth', 1.5);
 xlabel('Change in water level (x)');
 ylabel('Water flowing out of the dam (y)');
 hold on;
-plot(X, [ones(m, 1) X]*theta, '--', 'LineWidth', 2)
+plot(X, [ones(m, 1) X] * theta, '--', 'LineWidth', 2)
 hold off;
 
 fprintf('Program paused. Press enter to continue.\n');
@@ -105,10 +105,9 @@ pause;
 %
 
 lambda = 0;
-[error_train, error_val] = ...
-    learningCurve([ones(m, 1) X], y, ...
-                  [ones(size(Xval, 1), 1) Xval], yval, ...
-                  lambda);
+[error_train, error_val] = learningCurve([ones(m, 1) X], y, ...
+                                         [ones(size(Xval, 1), 1) Xval], ...
+                                          yval, lambda);
 
 plot(1:m, error_train, 1:m, error_val);
 title('Learning curve for linear regression')
@@ -124,6 +123,7 @@ end
 
 fprintf('Program paused. Press enter to continue.\n');
 pause;
+
 
 %% =========== Part 6: Feature Mapping for Polynomial Regression =============
 %  One solution to this is to use polynomial regression. You should now
@@ -141,7 +141,7 @@ X_poly = [ones(m, 1), X_poly];                   % Add Ones
 X_poly_test = polyFeatures(Xtest, p);
 X_poly_test = bsxfun(@minus, X_poly_test, mu);
 X_poly_test = bsxfun(@rdivide, X_poly_test, sigma);
-X_poly_test = [ones(size(X_poly_test, 1), 1), X_poly_test];         % Add Ones
+X_poly_test = [ones(size(X_poly_test, 1), 1), X_poly_test];        % Add Ones
 
 % Map X_poly_val and normalize (using mu and sigma)
 X_poly_val = polyFeatures(Xval, p);
@@ -154,7 +154,6 @@ fprintf('  %f  \n', X_poly(1, :));
 
 fprintf('\nProgram paused. Press enter to continue.\n');
 pause;
-
 
 
 %% =========== Part 7: Learning Curve for Polynomial Regression =============

@@ -33,6 +33,8 @@ error_val   = zeros(m, 1);
 %
 %       For the cross-validation error, you should instead evaluate on
 %       the _entire_ cross validation set (Xval and yval).
+%       
+%       æ¯æ¬¡è®¡ç®—è®­ç»ƒé›†è¯¯å·®æ€»æ˜¯è®¡ç®—å½“å‰ç´¯è®¡çš„è®­ç»ƒæ ·æœ¬è¯¯å·®ï¼Œè®¡ç®—æµ‹è¯•é›†è¯¯å·®æ˜¯æ•´ä¸ªæµ‹è¯•é›†è¿›è¡Œè®¡ç®—
 %
 % Note: If you are using your cost function (linearRegCostFunction)
 %       to compute the training and cross validation error, you should 
@@ -55,17 +57,16 @@ error_val   = zeros(m, 1);
 
 for i = 1 : m
     
-    %ÀûÓÃX(1:i,:),y(1:i),trainLinearReg(),À´ÑµÁ·²ÎÊıtheta,ÒòÎª»­µÄÍ¼ÊÇÒÔm£¨ÑµÁ·¼¯´óĞ¡£©×÷Îªºá×ø±êµÄ
-    theta = trainLinearReg(X(1:i,:),y(1:i),lambda);
+    %åˆ©ç”¨X(1:i,:),y(1:i),trainLinearReg(),æ¥è®­ç»ƒå‚æ•°theta,å› ä¸ºç”»çš„å›¾æ˜¯ä»¥mï¼ˆè®­ç»ƒé›†å¤§å°ï¼‰ä½œä¸ºæ¨ªåæ ‡çš„
+    theta = trainLinearReg(X(1:i, :), y(1:i), lambda);
     
     
-    %ÑµÁ·Îó²î¼ÆËãÖ»ÓÃX(1:i,:), y(1:i)
-    [error_train(i),grad] = linearRegCostFunction(X(1:i,:),y(1:i),theta,0);
+    %è®­ç»ƒè¯¯å·®è®¡ç®—åªç”¨X(1:i,:), y(1:i)
+    [error_train(i), grad] = linearRegCostFunction(X(1:i, :), y(1:i), theta, 0);
     
-%     [error_train(i),grad] = linearRegCostFunction(tempMatrixX,tempMatrixY,theta,0);%extra 3.5
     
-    %½»²æÑéÖ¤ÓÃÉÏËùÓĞµÄÑéÖ¤¼¯£¬¼´Xval, yval
-    [error_val(i),grad] = linearRegCostFunction(Xval,yval,theta,0);
+    %äº¤å‰éªŒè¯ç”¨ä¸Šæ‰€æœ‰çš„éªŒè¯é›†ï¼Œå³Xval, yval
+    [error_val(i), grad] = linearRegCostFunction(Xval, yval, theta, 0);
 
 end
 

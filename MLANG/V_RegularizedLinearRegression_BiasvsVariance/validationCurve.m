@@ -37,18 +37,17 @@ error_val = zeros(length(lambda_vec), 1);
 %           
 %       end
 %
-%
 
 for i = 1 : length(lambda_vec)
     
     lambda = lambda_vec(i);
     
-    theta = trainLinearReg(X,y,lambda);
+    theta = trainLinearReg(X, y, lambda);
     
-    [error_train(i),grad] =  linearRegCostFunction(X,y,theta,0);
-    %计算error_train和error_val并不需要加入lambda参数，lambda参数是在计算theta时用到的
+    [error_train(i), grad] =  linearRegCostFunction(X, y, theta, 0);
+    %璁＄畻error_train鍜宔rror_val骞朵笉闇�瑕佸姞鍏ambda鍙傛暟锛宭ambda鍙傛暟鏄湪璁＄畻theta鏃剁敤鍒扮殑
     
-    [error_val(i),grad] = linearRegCostFunction(Xval,yval,theta,0);
+    [error_val(i), grad] = linearRegCostFunction(Xval, yval, theta, 0);
     
 end
 
