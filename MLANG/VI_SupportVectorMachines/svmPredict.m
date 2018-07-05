@@ -28,7 +28,7 @@ elseif strfind(func2str(model.kernelFunction), 'gaussianKernel')
     % This is equivalent to computing the kernel on every pair of examples
     X1 = sum(X.^2, 2);
     X2 = sum(model.X.^2, 2)';
-    K = bsxfun(@plus, X1, bsxfun(@plus, X2, - 2 * X * model.X'));
+    K = bsxfun(@plus, X1, bsxfun(@plus, X2, -2 * X * model.X'));
     K = model.kernelFunction(1, 0) .^ K;
     K = bsxfun(@times, model.y', K);
     K = bsxfun(@times, model.alphas', K);
@@ -40,7 +40,7 @@ else
         for j = 1:size(model.X, 1)
             prediction = prediction + ...
                 model.alphas(j) * model.y(j) * ...
-                model.kernelFunction(X(i,:)', model.X(j,:)');
+                model.kernelFunction(X(i, :)', model.X(j, :)');
         end
         p(i) = prediction + model.b;
     end

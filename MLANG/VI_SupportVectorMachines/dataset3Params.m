@@ -24,7 +24,7 @@ sigma = 0.3;
 %
 
 paraSection = [0.01 , 0.03 , 0.1 , 0.3 , 1 , 3 , 10 , 30];
-errorVector = zeros(length(paraSection),length(paraSection));
+errorVector = zeros(length(paraSection), length(paraSection));
 
 for i = 1 : length(paraSection)
     C = paraSection(i);
@@ -32,12 +32,12 @@ for i = 1 : length(paraSection)
         sigma = paraSection(j);
         model= svmTrain(X, y, C, @(x1, x2) gaussianKernel(x1, x2, sigma));
         predictions = svmPredict(model, Xval);
-        errorVector(i,j) = mean(double(predictions ~= yval));
+        errorVector(i, j) = mean(double(predictions ~= yval));
     end
 end
 
 value = min(min(errorVector));
-[rol,col] = find(value == errorVector);
+[rol, col] = find(value == errorVector);
 
 C = paraSection(rol);
 sigma = paraSection(col);

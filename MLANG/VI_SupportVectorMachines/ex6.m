@@ -147,4 +147,3 @@ visualizeBoundary(X, y, model);
 
 fprintf('Program paused. Press enter to continue.\n');
 pause;
-

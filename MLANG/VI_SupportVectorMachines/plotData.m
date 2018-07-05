@@ -6,7 +6,8 @@ function plotData(X, y)
 % Note: This was slightly modified such that it expects y = 1 or y = 0
 
 % Find Indices of Positive and Negative Examples
-pos = find(y == 1); neg = find(y == 0);
+pos = find(y == 1); 
+neg = find(y == 0);
 
 % Plot Examples
 plot(X(pos, 1), X(pos, 2), 'k+','LineWidth', 1, 'MarkerSize', 7)
