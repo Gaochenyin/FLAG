@@ -25,13 +25,13 @@ centroids = zeros(K, n);
 % Note: You can use a for-loop over the centroids to compute this.
 %
 
-for i = 1 : K
+for i = 1:K
     label = find(idx == i);
-    temp = zeros(1,n);
+    temp = zeros(1, n);
     for j = 1 : length(label)
-        temp = temp + X(label(j,:),:);
+        temp = temp + X(label(j, :), :);
     end
-    centroids(i,:) = centroids(i,:) + temp ./ length(label);
+    centroids(i, :) = centroids(i, :) + temp ./ length(label);
 end
 
 % =============================================================

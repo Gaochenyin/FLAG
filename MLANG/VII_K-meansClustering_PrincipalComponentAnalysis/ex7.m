@@ -19,12 +19,12 @@
 %
 
 %% Initialization
-clear ; close all; clc
+clear; close all; clc
 
 %% ================= Part 1: Find Closest Centroids ====================
 %  To help you implement K-Means, we have divided the learning algorithm 
 %  into two functions -- findClosestCentroids and computeCentroids. In this
-%  part, you shoudl complete the code in the findClosestCentroids function. 
+%  part, you should complete the code in the findClosestCentroids function. 
 %
 fprintf('Finding closest centroids.\n\n');
 
@@ -56,7 +56,7 @@ fprintf('\nComputing centroids means.\n\n');
 centroids = computeCentroids(X, idx, K);
 
 fprintf('Centroids computed after initial finding of closest centroids: \n')
-fprintf(' %f %f \n' , centroids');
+fprintf(' %f %f \n', centroids');
 fprintf('\n(the centroids should be\n');
 fprintf('   [ 2.428301 3.157924 ]\n');
 fprintf('   [ 5.813503 2.633656 ]\n');
@@ -153,7 +153,7 @@ idx = findClosestCentroids(X, centroids);
 
 % We can now recover the image from the indices (idx) by mapping each pixel
 % (specified by it's index in idx) to the centroid value
-X_recovered = centroids(idx,:);
+X_recovered = centroids(idx, :);
 
 % Reshape the recovered image into proper dimensions
 X_recovered = reshape(X_recovered, img_size(1), img_size(2), 3);
