@@ -31,7 +31,7 @@ for i = 1:K
     for j = 1 : length(label)
         temp = temp + X(label(j, :), :);
     end
-    centroids(i, :) = centroids(i, :) + temp ./ length(label);
+    centroids(i, :) = temp ./ length(label);
 end
 
 % =============================================================
