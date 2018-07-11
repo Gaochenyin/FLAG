@@ -132,7 +132,7 @@ max_iters = 10;
 initial_centroids = kMeansInitCentroids(X, K);
 
 % Run K-Means
-[centroids, idx] = runkMeans(X, initial_centroids, max_iters);
+[centroids, idx] = runkMeans(X, initial_centroids, max_iters, true);
 
 fprintf('Program paused. Press enter to continue.\n');
 pause;
@@ -153,7 +153,7 @@ idx = findClosestCentroids(X, centroids);
 
 % We can now recover the image from the indices (idx) by mapping each pixel
 % (specified by it's index in idx) to the centroid value
-X_recovered = centroids(idx, :);
+X_recovered = centroids(idx, :); % This step is important to get recovered data
 
 % Reshape the recovered image into proper dimensions
 X_recovered = reshape(X_recovered, img_size(1), img_size(2), 3);

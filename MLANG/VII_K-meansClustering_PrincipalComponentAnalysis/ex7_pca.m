@@ -205,6 +205,8 @@ initial_centroids = kMeansInitCentroids(X, K);
 %  Sample 1000 random indexes (since working with all the data is
 %  too expensive. If you have a fast computer, you may increase this.
 sel = floor(rand(1000, 1) * size(X, 1)) + 1;
+% All points
+% sel = floor(rand(size(X, 1), 1) * size(X, 1)) + 1;
 
 %  Setup Color Palette
 palette = hsv(K);
