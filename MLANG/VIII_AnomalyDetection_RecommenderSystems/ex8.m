@@ -3,7 +3,7 @@
 %
 %  Instructions
 %  ------------
-%
+
 %  This file contains code that helps you get started on the
 %  exercise. You will need to complete the following functions:
 %
@@ -16,7 +16,7 @@
 %
 
 %% Initialization
-clear ; close all; clc
+clear; close all; clc
 
 %% ================== Part 1: Load Example Dataset  ===================
 %  We start this exercise by using a small dataset that is easy to
