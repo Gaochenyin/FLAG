@@ -60,7 +60,7 @@ R = R(1:num_movies, 1:num_users);
 
 %  Evaluate cost function
 J = cofiCostFunc([X(:) ; Theta(:)], Y, R, num_users, num_movies, ...
-               num_features, 0);
+                  num_features, 0);
            
 fprintf(['Cost at loaded parameters: %f '...
          '\n(this value should be about 22.22)\n'], J);
@@ -91,7 +91,7 @@ pause;
 
 %  Evaluate cost function
 J = cofiCostFunc([X(:) ; Theta(:)], Y, R, num_users, num_movies, ...
-               num_features, 1.5);
+                  num_features, 1.5);
            
 fprintf(['Cost at loaded parameters (lambda = 1.5): %f '...
          '\n(this value should be about 31.34)\n'], J);
@@ -135,15 +135,15 @@ my_ratings(98) = 2;
 
 % We have selected a few movies we liked / did not like and the ratings we
 % gave are as follows:
-my_ratings(7) = 3;
-my_ratings(12)= 5;
-my_ratings(54) = 4;
-my_ratings(64)= 5;
-my_ratings(66)= 3;
-my_ratings(69) = 5;
+my_ratings(7)   = 3;
+my_ratings(12)  = 5;
+my_ratings(54)  = 4;
+my_ratings(64)  = 5;
+my_ratings(66)  = 3;
+my_ratings(69)  = 5;
 my_ratings(183) = 4;
 my_ratings(226) = 5;
-my_ratings(355)= 5;
+my_ratings(355) = 5;
 
 fprintf('\n\nNew user ratings:\n');
 for i = 1:length(my_ratings)
@@ -197,12 +197,12 @@ options = optimset('GradObj', 'on', 'MaxIter', 100);
 % Set Regularization
 lambda = 10;
 theta = fmincg (@(t)(cofiCostFunc(t, Y, R, num_users, num_movies, ...
-                                num_features, lambda)), ...
-                initial_parameters, options);
+                                  num_features, lambda)), ...
+                     initial_parameters, options);
 
 % Unfold the returned theta back into U and W
 X = reshape(theta(1:num_movies*num_features), num_movies, num_features);
-Theta = reshape(theta(num_movies*num_features+1:end), ...
+Theta = reshape(theta(num_movies*num_features + 1:end), ...
                 num_users, num_features);
 
 fprintf('Recommender system learning completed.\n');
@@ -216,13 +216,13 @@ pause;
 %
 
 p = X * Theta';
-my_predictions = p(:,1) + Ymean;
+my_predictions = p(:, 1) + Ymean;
 
 movieList = loadMovieList();
 
 [r, ix] = sort(my_predictions, 'descend');
 fprintf('\nTop recommendations for you:\n');
-for i=1:10
+for i = 1:10
     j = ix(i);
     fprintf('Predicting rating %.1f for movie %s\n', my_predictions(j), ...
             movieList{j});

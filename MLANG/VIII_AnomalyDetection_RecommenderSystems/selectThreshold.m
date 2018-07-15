@@ -14,7 +14,7 @@ F1 = 0;
 % cvPredictions = zeros(m,n);
 
 stepsize = (max(pval) - min(pval)) / 1000;
-for epsilon = min(pval):stepsize:max(pval)
+for epsilon = min(pval) : stepsize : max(pval)
     
     % ====================== YOUR CODE HERE ======================
     % Instructions: Compute the F1 score of choosing epsilon as the
