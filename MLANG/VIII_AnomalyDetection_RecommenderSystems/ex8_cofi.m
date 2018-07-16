@@ -174,7 +174,7 @@ load('ex8_movies.mat');
 %  rating to movie i
 
 %  Add our own ratings to the data matrix
-Y = [my_ratings Y];
+Y = [ my_ratings Y];
 R = [(my_ratings ~= 0) R];
 
 %  Normalize Ratings
@@ -201,8 +201,8 @@ theta = fmincg (@(t)(cofiCostFunc(t, Y, R, num_users, num_movies, ...
                      initial_parameters, options);
 
 % Unfold the returned theta back into U and W
-X = reshape(theta(1:num_movies*num_features), num_movies, num_features);
-Theta = reshape(theta(num_movies*num_features + 1:end), ...
+X     = reshape(theta(1:num_movies * num_features), num_movies, num_features);
+Theta = reshape(theta(num_movies * num_features + 1:end), ...
                 num_users, num_features);
 
 fprintf('Recommender system learning completed.\n');
