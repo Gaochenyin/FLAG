@@ -1,3 +1,5 @@
-# Algorithms, 4th Edition  Princeton.edu
+# Algorithms
 
-by Robert Sedgewick and Kevin Wayne
+4th Edition by Robert Sedgewick and Kevin Wayne 
+
+Princeton.edu
