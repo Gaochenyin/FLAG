@@ -15,7 +15,7 @@ midterm exam | $(midterm \ exam)^2$ | final exam
 
 **What is the normalized feature $x_1^{(1)}$? (Hint: midterm = 89, final = 96 is training example 1.) Please round off your answer to two decimal places and enter in the text box below.**
 
-****
+**$Normalized \ x_1^{(1)} = \frac{89 - \mu_1}{s_1} = \frac{89 - \frac{89 + 72 + 94 + 69}{4}}{94 - 69} = 0.32$**
 
 ----
 
@@ -23,7 +23,7 @@ midterm exam | $(midterm \ exam)^2$ | final exam
 
 A. Rather than use the current value of $\alpha$, it'd be more promising to try a larger value of $\alpha$ (say $\alpha = 1.0$).
 
-B. Rather than use the current value of $\alpha$ , it'd be more promising to try a smaller value of $\alpha$ (say $\alpha = 0.1$).
+**B. Rather than use the current value of $\alpha$ , it'd be more promising to try a smaller value of $\alpha$ (say $\alpha = 0.1$).**
 
 C. $\alpha = 0.3$ is an effective choice of learning rate.
 
@@ -31,7 +31,7 @@ C. $\alpha = 0.3$ is an effective choice of learning rate.
 
 **3. Suppose you have $m = 28$ training examples with $n = 4$ features (excluding the additional all-ones feature for the intercept term, which you should add). The normal equation is $\theta = (X^T X)^{-1} X^T y$. For the given values of mm and nn, what are the dimensions of $\theta$, $X$, and $y$ in this equation?**
 
-A. $X$ is 28 x 5, $y$ is 28 x 1, $\theta$ is 5 x 1
+**A. $X$ is 28 x 5, $y$ is 28 x 1, $\theta$ is 5 x 1**
 
 B. $X$ is 28 x 4, $y$ is 28 x 1, $\theta$ is 4 x 1
 
@@ -45,7 +45,7 @@ D. $X$ is 28 x 4, $y$ is 28 x 1, $\theta$ is 4 x 4
 
 A. Gradient descent, since it will always converge to the optimal $\theta$.
 
-B. Gradient descent, since $(X^TX)^{-1}$ will be very slow to compute in the normal equation.
+**B. Gradient descent, since $(X^TX)^{-1}$ will be very slow to compute in the normal equation.**
 
 C. The normal equation, since it provides an efficient way to directly find the solution.
 
@@ -55,7 +55,7 @@ D. The normal equation, since gradient descent might be unable to find the optim
 
 **5. Which of the following are reasons for using feature scaling?**
 
-A. It speeds up gradient descent by making it require fewer iterations to get to a good solution.
+**A. It speeds up gradient descent by making it require fewer iterations to get to a good solution.**
 
 B. It prevents the matrix $X^TX$ (used in the normal equation) from being non-invertable (singular/degenerate).
 
