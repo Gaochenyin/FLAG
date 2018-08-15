@@ -4,17 +4,17 @@
 
 **1. Consider the following 2D dataset:**
 
-![1](https://d18ky98rnyall9.cloudfront.net/lkk6_L7kEeSZtCIACx4DqA_15.1-question.jpg?Expires=1533686400&Signature=ZniVLFW6lLsSR2R2rdHfcySn1F1XeFnQgqVCORWkzCFHQb~qZ-GiOdYeyU3DUij84WGHfYFsoGlfTA-g8xFJopl5CQQiVkuQs8bjxtRl4yX9eCLdAYrrD2q8Rr1xJpK2wF7m7CZ8YTu7dwDnQcRRzTqXN9s9gYHTTp~I4~hw5Yw_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A)
+![1](https://github.com/phdsky/FLAG/blob/master/MLANG/images/Week8_PrincipalComponentAnalysis/1.jpg)
 
 **Which of the following figures correspond to possible values that PCA may return for $u^{(1)}$ (the first eigenvector / first principal component)? Check all that apply (you may have to check more than one figure).**
 
-**A**. ![1-1](https://d18ky98rnyall9.cloudfront.net/wBdxSL7kEeSKOiIAC1ARFQ_15.1-a.jpg?Expires=1533686400&Signature=V23w6w6B-7OTZ2ZbwRk7S6GorjyxUVKTtZy1yqXcYLv6GJZF4ZPtAIcdCi1hBUPvyjR5bVzbl2kPklofnqLtaHjYSUrz4TEmQxxUXlfqa7z4f~QTleMZkWMMdAdRiPVLZBawd8a7bhvIb1c95mObCgIJ6AFYq990i4gTQrRlukI_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A)
+**A**. ![1-1](https://github.com/phdsky/FLAG/blob/master/MLANG/images/Week8_PrincipalComponentAnalysis/1-1.jpg)
 
-**B**. ![1-2](https://d18ky98rnyall9.cloudfront.net/6lGHcL7kEeSZtCIACx4DqA_15.1-b.jpg?Expires=1533686400&Signature=J5q6k3OQcKJUThuka3c5pNUgiWlgcun66~NMHdl3aS2T22BsNKRlqxP1tq6MwNGX8x5FJ8sCqnE2pUKb-f5kG55tPo3PdyNXkBXzeN5wnROi6fO6mUQKLe057KkWti~W3DaXyQNGnVrYEo778crgabJyzBF8ZdbN7PBKl7ac~~Y_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A)
+**B**. ![1-2](https://github.com/phdsky/FLAG/blob/master/MLANG/images/Week8_PrincipalComponentAnalysis/1-2.jpg)
 
-C. ![1-3](https://d18ky98rnyall9.cloudfront.net/_Say2r7kEeSKOiIAC1ARFQ_15.1-c.jpg?Expires=1533686400&Signature=WjLldgIFdjtYtDjlnjQ3IJbzKV1wYaESGOXVmFxE1qLGMBvdS7fwUbn4UC1MlsMbMYvyQI3yAv~AYD6m~5P80J4l~4S-JGTACrdtCMQBz20dL972hiItP6VfnITWTGd0TwNxHDcj~h1quOktzvhkZa2J1Fcczt~0WRBccyyN5z8_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A)
+C. ![1-3](https://github.com/phdsky/FLAG/blob/master/MLANG/images/Week8_PrincipalComponentAnalysis/1-3.jpg)
 
-D. ![1-4](https://d18ky98rnyall9.cloudfront.net/DoOVFr7lEeSjMiIAC7MDiQ_15.1-d.jpg?Expires=1533686400&Signature=QJOZJk3Hv2XUW8JG9Q19mus1Vb~TMWSZ9KGPXFcRvLLwZbvClxZmsUbrlTb6L5nweh04YKQhECJvzFKAFmf5qJjN6leCmcfLWQcKHc3Ud38GttUN4mRPWidfqZ3TRJOGPYswgyB4hoL7WVIF-quOrmZn8dLq0rviF~FNSeftbAQ_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A)
+D. ![1-4](https://github.com/phdsky/FLAG/blob/master/MLANG/images/Week8_PrincipalComponentAnalysis/1-4.jpg)
 
 ----
 
