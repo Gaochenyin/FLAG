@@ -21,7 +21,7 @@ D. C = B' * A;
 
 ----
 
-**2. Let A = $\begin{bmatrix} 16 & 2 & 3 & 13 \\ 5 & 11 & 10 & 8 \\ 9 & 7 & 6 & 12 \\ 4 & 14 & 15 & 1\end{bmatrix}$ Which of the following indexing expressions gives B = $\begin{bmatrix} 16 & 2 \\ 5 & 11 \\ 9 & 7 \\ 4 & 14\end{bmatrix}$? Check all that apply.**
+**2. Let A = $\begin{bmatrix} 16 & 2 & 3 & 13 \\\\ 5 & 11 & 10 & 8 \\\\ 9 & 7 & 6 & 12 \\\\ 4 & 14 & 15 & 1\end{bmatrix}$ Which of the following indexing expressions gives B = $\begin{bmatrix} 16 & 2 \\\\ 5 & 11 \\\\ 9 & 7 \\\\ 4 & 14\end{bmatrix}$? Check all that apply.**
 
 **A. B = A(:, 1:2);**
 

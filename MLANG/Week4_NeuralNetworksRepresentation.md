@@ -32,7 +32,7 @@ D. XOR(exclusive OR)
 
 ![3](https://github.com/phdsky/FLAG/blob/master/MLANG/images/Week4_NeuralNetworksRepresentation/3.png)
 
-**A**. $a^{(3)}_1 = g(\Theta^{(2)}_{1,0}a^{(2)}_0 + \Theta^{(2)}_{1,1}a^{(2)}_1 + \Theta^{(2)}_{1,2}a^{(2)}_2)$
+**A**. $a_1^{(3)} = g(\Theta_{1,0}^{(2)}a_0^{(2)} + \Theta_{1,1}^{(2)}a_1^{(2)} + \Theta_{1,2}^{(2)}a_2^{(2)})$
 
 B. $a^{(3)}_1 = g(\Theta^{(2)}_{1,0}a^{(1)}_0 + \Theta^{(2)}_{1,1}a^{(1)}_1 + \Theta^{(2)}_{1,2}a^{(1)}_2)$
 
@@ -62,7 +62,7 @@ D. z = sigmoid(x); a2 = sigmoid (Theta1 * z);
 
 ----
 
-**5. You are using the neural network pictured below and have learned the parameters $\Theta^{(1)} = \begin{bmatrix} 1 & 2.1 & 1.3 \\ 1 & 0.6 & -1.2\end{bmatrix}$(used to compute $a^{(2)}$) and $\Theta^{(2)} = \begin{bmatrix} 1 & 4.5 & 3.1\end{bmatrix}$(used to compute $a^{(3)}$ as a function of $a^{(2)}$). Supposed you swap the parameters for the first hidden layer between its two units so $\Theta^{(1)} = \begin{bmatrix} 1& 0.6 & -1.2 \\ 1 & 2.1 & 1.3\end{bmatrix}$ and also swap the output layer so $\Theta^{(2)} = \begin{bmatrix} 1 & 3.1 & 4.5 \end{bmatrix}$. How will this change the value of the output $h_{\theta}(x)$?**
+**5. You are using the neural network pictured below and have learned the parameters $\Theta^{(1)} = \begin{bmatrix} 1 & 2.1 & 1.3 \\\\ 1 & 0.6 & -1.2\end{bmatrix}$(used to compute $a^{(2)}$) and $\Theta^{(2)} = \begin{bmatrix} 1 & 4.5 & 3.1\end{bmatrix}$(used to compute $a^{(3)}$ as a function of $a^{(2)}$). Supposed you swap the parameters for the first hidden layer between its two units so $\Theta^{(1)} = \begin{bmatrix} 1 & 0.6 & -1.2 \\\\ 1 & 2.1 & 1.3\end{bmatrix}$ and also swap the output layer so $\Theta^{(2)} = \begin{bmatrix} 1 & 3.1 & 4.5 \end{bmatrix}$. How will this change the value of the output $h_{\theta}(x)$?**
 
 ![5](https://github.com/phdsky/FLAG/blob/master/MLANG/images/Week4_NeuralNetworksRepresentation/5.png)
 
