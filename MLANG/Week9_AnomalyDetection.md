@@ -52,7 +52,7 @@ D. In a typical anomaly detection setting, we have a large number of anomalous e
 
 **5. You have a 1-D dataset $\{x(1),\ldots,x(m)\}$ and you want to detect outliers in the dataset. You first plot the dataset and it looks like this:**
 
-![5](https://d18ky98rnyall9.cloudfront.net/ee5JoL54EeSVRiIAC2sM-Q_Screen-Shot-2015-02-27-at-4.01.53-AM.png?Expires=1533600000&Signature=GC7vulsMZPQKiQMM96PPELzSWn~4CwZJk9G8ueyFZx9srEYWwCosRdbNgxAxGK0~bBz~niINZsrIrBBShToAx9NP9G3wOg-aoYlwgyXkHmiZV~SCeWa834PDtq~tQBRqWXbBlQIr6AS12aWzOxig8nKKWD4e8MMxtj3dZU7Ss-c_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A)
+![5](https://github.com/phdsky/FLAG/blob/master/MLANG/images/Week9_AnomalyDetection/5.png)
 
 **Suppose you fit the gaussian distribution parameters $\mu_1$ and $\sigma^2_1$ to this dataset. Which of the following values for $\mu_1$ and $\sigma^2_1$ might you get?**
 
