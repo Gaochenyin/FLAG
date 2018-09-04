@@ -52,7 +52,7 @@ B. For collaborative filtering, the optimization algorithm you should use is gra
 
 **5. Suppose you have two matrices $A$ and $B$, where $A$ is 5x3 and $B$ is 3x5. Their product is $C = AB$, a 5x5 matrix. Furthermore, you have a 5x5 matrix $R$ where every entry is 0 or 1. You want to find the sum of all elements $C(i,j)$ for which the corresponding $R(i,j)$ is 1, and ignore all elements $C(i,j)$ where $R(i,j) = 0$. One way to do so is the following code:**
 
-![5](https://d18ky98rnyall9.cloudfront.net/FWSRAr55EeSVRiIAC2sM-Q_Screen-Shot-2015-02-27-at-4.05.35-AM.png?Expires=1533686400&Signature=NzODKfFGC1cnuNaWfGgKQK0k2KHs-mLxXinxl9wg1jDgvIaeoECeK4WvmECclNwAFxo~sGmdpdncCqS44Mc0WyCL7X1CY-3IwezI20j2Hb6g6n8K81IuQA5XCpCBwo-qljfFIIlRnKM0L6m8Butla1Q-sFKpxb6dKvquuneQzDs_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A)
+![5](https://github.com/phdsky/FLAG/blob/master/MLANG/images/Week9_RecommenderSystems/5.png)
 
 Which of the following pieces of Octave code will also correctly compute this total? Check all that apply. Assume all options are in code.
 
