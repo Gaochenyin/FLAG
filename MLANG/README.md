@@ -4,6 +4,7 @@ Machine Learning by ANG
 ----
 
 # Quiz & Code
+All mathjax equations in quizes are well shown in CSDN Markdown editor
 
 ----
 
