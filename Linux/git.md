@@ -29,8 +29,7 @@
 --soft 仅在工作目录移动HEAD指针  
 --mixed 在工作目录移动HEAD指针 重置暂存区  
 --hard 在工作目录移动HEAD指针 重置暂存区和工作区  
-
-- git reset --hard 之后如果有commit，那么可以找回原文件；如果直接push到了一个unprotected的远程分支，那么就直接将之前的commit全部覆盖掉  
+git reset --hard 之后如果有commit，那么可以找回原文件；如果直接push到了一个unprotected的远程分支，那么就直接将之前的commit全部覆盖掉  
 
 **git diff file** 将工作目录和暂存区文件进行比较  
 **git diff HEAD/hash** 将工作目录和工作区进行比较  
@@ -39,7 +38,7 @@
 **git branch -v** 查看分支信息  
 **git branch branch_name** 创建分支  
 **git checkout branch_name** 切换分支  
-**git merge branch_name** 合并分支 在此之前需要先切换到目标分支 然后合并作出修改的分支 | 合并有冲突的话需要手动去merge  
+**git merge branch_name** 合并分支 在此之前需要先切换到目标分支 然后进行合并，有冲突的话需要手动merge  
 
 **git remote -v** 查看远程仓库  
 **git remote add origin https://xxx.com** 添加远程仓库 origin是别名 地址是https格式  
