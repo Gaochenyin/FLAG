@@ -46,15 +46,11 @@ def main(argv):
         n_classes=3)
 
     # Train the Model.
-    classifier.train(
-        input_fn=lambda:iris_data.train_input_fn(train_x, train_y,
-                                                 args.batch_size),
-        steps=args.train_steps)
+    classifier.train(input_fn=lambda:iris_data.train_input_fn(train_x, train_y, args.batch_size),
+                     steps=args.train_steps)
 
     # Evaluate the model.
-    eval_result = classifier.evaluate(
-        input_fn=lambda:iris_data.eval_input_fn(test_x, test_y,
-                                                args.batch_size))
+    eval_result = classifier.evaluate(input_fn=lambda:iris_data.eval_input_fn(test_x, test_y, args.batch_size))
 
     print('\nTest set accuracy: {accuracy:0.3f}\n'.format(**eval_result))
 
@@ -67,10 +63,7 @@ def main(argv):
         'PetalWidth': [0.5, 1.5, 2.1],
     }
 
-    predictions = classifier.predict(
-        input_fn=lambda:iris_data.eval_input_fn(predict_x,
-                                                labels=None,
-                                                batch_size=args.batch_size))
+    predictions = classifier.predict(input_fn=lambda: iris_data.eval_input_fn(predict_x, labels=None, batch_size=args.batch_size))
 
     template = ('\nPrediction is "{}" ({:.1f}%), expected "{}"')
 
@@ -78,8 +71,7 @@ def main(argv):
         class_id = pred_dict['class_ids'][0]
         probability = pred_dict['probabilities'][class_id]
 
-        print(template.format(iris_data.SPECIES[class_id],
-                              100 * probability, expec))
+        print(template.format(iris_data.SPECIES[class_id], 100 * probability, expec))
 
 
 if __name__ == '__main__':
