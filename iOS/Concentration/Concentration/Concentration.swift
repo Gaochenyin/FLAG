@@ -18,6 +18,8 @@ class Concentration {
         }
     }
     
+    var indexOfOneAndOnlyFaceUpCard: Int?
+    
     func chooseCard(at index: Int) {
         
     }
