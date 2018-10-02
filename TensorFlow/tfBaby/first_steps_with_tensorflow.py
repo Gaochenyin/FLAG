@@ -47,3 +47,30 @@ my_optimizer = tf.contrib.estimator.clip_gradients_by_norm(my_optimizer, 5.0)
 
 linear_regressor = tf.estimator.LinearRegressor(feature_columns=feature_columns, optimizer=my_optimizer)
 
+def my_input_fn(features, tatgets, batch_size=1, shuffle=True, num_epochs=None):
+    """Trains a linear regression model of one feature
+
+    Args:
+        features: pandas DataFrame of features
+        targets: pandas Dataframe of targets
+        batch_size: Size of batches to be passed to the model
+        shuffle: True or False. Whether to shuffle the data
+        num_epochs: Number of epochs for which data shoule be repeated. None = repeat indenfinitely
+    Returns:
+        Tuple of (features, labels) for next data batch
+    """
+    # Convert pandas data into a dict of np arrays.
+    features = {key:np.array(value) for key, value in dict(features).items()}
+
+    # Construcht a dataset, and configure batching/repeating.
+    ds = Dataset.from_tensor_slices((features, targets))
+    ds = ds.batch(batch_size).repeat(num_epochs)
+
+    # Shuffle the data, if sppeified
+    if shuffle:
+        ds = ds.shuffle(buffer_size=10000)
+
+    # Return the next batch of data
+    features, labels = ds.make_one_shot_iterator().get_next()
+    return features, labels
+
